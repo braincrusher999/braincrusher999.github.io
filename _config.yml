@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: Braincrusher999
+subtitle: '整点薯条吃吃'
 description: ''
-keywords:
-author: John Doe
-language: en
+keywords: ["tech", "github", "hexo"]
+author: Braincrusher999
+language: zh-CN
 timezone: ''
 
 # URL
@@ -43,16 +43,19 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
-highlight:
+syntax_highlighter: prismjs
+highlight: 
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  preprocess: true
-  line_number: true
+  enable: true
+  preprocess: false
+  line_number: false
+  line_threshold: 0
   tab_replace: ''
 
 # Home page setting
@@ -61,7 +64,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 6
   order_by: -date
 
 # Category & Tag
@@ -96,9 +99,20 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+theme: hexo-theme-matery
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+
+search:
+  path: search.xml
+  field: post
+
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
